@@ -23,14 +23,13 @@ var textY = 10;
 
 function keyPressed(){
   if (!startScreen){
-    if ((key >= 'a' && key <= 'z') || key == ' '){
+    if ((key >= 'a' && key <= 'z') || key == ' ' || key == ','){
       if (lastChar == ' '){
         lastWord = "";
       }
       lastChar = key;
       if (key != ' '){
         lastWord += key;
-        console.log(lastWord);
       }
       myText += key;
       text(myText, textX, textY);
